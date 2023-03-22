@@ -25,14 +25,16 @@ void jack_bauer(void)
 					_putchar(':');
 					_putchar('0' + k);
 					_putchar('0' + l);
-					_putchar('\n');
 					if (i == 2 && j == 3 && k == 5
 							&& l == 9)
 					{
-						break;
+						goto jump;
 					}
+					_putchar('\n');
 				}
 			}
 		}
 	}
+jump:
+	_putchar('\n');
 }
