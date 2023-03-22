@@ -36,7 +36,10 @@ void times_table(void)
 			}
 			_putchar(',');
 			_putchar(' ');
-			_putchar(' ');
+			if (j * (i + 1) <= 9)
+			{
+				_putchar(' ');
+			}
 		}
 		j++;
 	}
