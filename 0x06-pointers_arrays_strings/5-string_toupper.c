@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h>
+#include <ctype.h>
 
 /**
  * *string_toupper - check the code
@@ -11,7 +11,16 @@
 
 char *string_toupper(char *s)
 {
-	char *p = strupr(s);
-
+	int i;
+	char *p = NULL;
+	int l[strlen(s)];
+	
+	i = 0;
+	while(s[i])
+	{
+		l[i] = toupper(s[i]);
+		p[i] = l[i];
+		i++;
+	}
 	return (p);
 }
