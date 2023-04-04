@@ -33,7 +33,10 @@ char *_strchr(char *s, char c)
 			i++;
 			j++;
 		}
+		s = s2;
+	} else
+	{
+		s = NULL;
 	}
-	s = s2;
 	return (s);
 }
