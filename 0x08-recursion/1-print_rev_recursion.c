@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "main.h"
-#include <string.h>
 
 /**
   * _print_rev_recursion - puts in recursion
@@ -9,15 +8,9 @@
 
 void _print_rev_recursion(char *s)
 {
-	int i = 0;
-	int size = strlen(s) - 1;
-
-	if (*(s + size))
+	if (*s != '\0')
 	{
-		_putchar(*(s + size));
-		_print_rev_recursion((s - ++i));
-	} else
-	{
-		_putchar('\n');
+		_print_rev_recursion((s + 1));
+		_putchar(*s);
 	}
 }
