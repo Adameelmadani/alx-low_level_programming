@@ -16,8 +16,13 @@ char *str_concat(char *s1, char *s2)
 	unsigned int size = strlen(s1) + strlen(s2);
 	unsigned int size1 = strlen(s1);
 	unsigned int size2 = strlen(s2);
-	char *p = malloc((size * sizeof(char)) + 1);
+	char *p;
 
+	if (s1 == NULL && s2 == NULL)
+	{
+		size = 1;
+	}
+	*p = malloc((size * sizeof(char)) + 1);
 	if (p == NULL)
 	{
 		return (NULL);
@@ -25,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 	{
 		i = 0;
-		*(p + i) = NULL;
+		*(p + i) = '\0';
 		i++;
 	} else
 	{
@@ -36,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2 == NULL)
 	{
-		*(p + i) = NULL;
+		*(p + i) = '\0';
 	} else
 	{
 		for (j = 0; j < size2; j++)
