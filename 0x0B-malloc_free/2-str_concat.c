@@ -22,14 +22,27 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < size1; i++)
+	if (s1 == NULL)
 	{
-		*(p + i) = *(s1 + i);
-	}
-	for (i = size1; i < size2; i++)
+		i = 0;
+		*(p + i) = ' ';
+		i++;
+	} else
 	{
-		*(p + i) = *(s2 + i);
+		for (i = 0; i < size1; i++)
+		{
+			*(p + i) = *(s1 + i);
+		}
 	}
-	p[i] = '\0';
+	if (s2 == NULL)
+	{
+		*(p + i) = ' ';
+	} else
+	{
+		for (i = size1; i < size2; i++)
+		{
+			*(p + i) = *(s2 + i);
+		}
+	}
 	return (p);
 }
