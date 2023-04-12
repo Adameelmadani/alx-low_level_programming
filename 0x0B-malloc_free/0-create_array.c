@@ -1,0 +1,27 @@
+#include "main.h"
+#include <stdlib.h>
+
+/**
+  * create_array - create it
+  * @size: int +
+  * @c: char
+  * Return: char pointer
+  */
+
+char *create_array(unsigned int size, char c)
+{
+	char *p;
+	int i = 0;
+
+	if (size == 0)
+	{
+		return NULL;
+	}
+	*p = malloc(size * sizeof(unsigned int));
+	while (*(p + i))
+	{
+		*(p + i) = c[i];
+		i++;
+	}
+	return (p);
+}
