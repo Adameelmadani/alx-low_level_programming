@@ -12,7 +12,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int unsigned i;
+	int unsigned i, j;
 	int unsigned size = strlen(s1) + strlen(s2);
 	int unsigned size1 = strlen(s1);
 	int unsigned size2 = strlen(s2);
@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 	{
 		i = 0;
-		*(p + i) = ' ';
+		*(p + i) = '\0';
 		i++;
 	} else
 	{
@@ -36,12 +36,13 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2 == NULL)
 	{
-		*(p + i) = ' ';
+		*(p + i) = '\0';
 	} else
 	{
-		for (i = size1; i < size2; i++)
+		for (j = 0; j < size2; j++)
 		{
-			*(p + i) = *(s2 + i);
+			*(p + i) = *(s2 + j);
+			i++;
 		}
 	}
 	return (p);
