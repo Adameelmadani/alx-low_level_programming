@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 	{
 		i = 0;
-		(p + i) = "";
+		strcpy(p, "", 1);
 		i++;
 	} else
 	{
@@ -41,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2 == NULL)
 	{
-		(p + i) = "";
+		strcpy(p + 1, "", 1);
 	} else
 	{
 		for (j = 0; j < size2; j++)
