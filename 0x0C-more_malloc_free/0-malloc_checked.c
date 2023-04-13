@@ -1,8 +1,9 @@
-#include <stdlib>
+#include <stdlib.h>
 
 /**
   * malloc_checked - checked
   * @b: u int
+  * Return: void pointer
   */
 
 void *malloc_checked(unsigned int b)
