@@ -12,9 +12,9 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i = 0;
-	unsigned int size1 = 0;
-	unsigned int size2 = 0;
+	int i = 0;
+	int size1 = 0;
+	int size2 = 0;
 	char *p;
 
 	for (size1 = 0; s1[size1] != '\0' && s1 != NULL; size1++)
