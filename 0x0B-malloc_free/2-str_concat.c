@@ -1,39 +1,30 @@
 #include "main.h"
-#include <string.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
-  * str_concat - str concat
-  * @s1: char
-  * @s2: char
-  * Return: char pointer
-  */
+ * str_concat - concatenates two strings.
+ * @s1: string 1
+ * @s2: string 2
+ * Return: pointer or NULL
+ */
 
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0;
-	int size1 = 0;
-	int size2 = 0;
 	char *p;
+	int i = 0, len1 = 0, len2 = 0;
 
-	for (size1 = 0; s1[size1] != '\0' && s1 != NULL; size1++)
+	for (len1 = 0; s1 != NULL && s1[len1] != '\0'; len1++)
 		;
-	for (size2 = 0; s2[size2] != '\0' && s2 != NULL; size2++)
+	for (len2 = 0; s2 != NULL && s2[len2] != '\0'; len2++)
 		;
-	p = (char *)malloc(sizeof(char) * (size1 + size2 + 1));
+	p = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
 	if (p == NULL)
-	{
 		return (NULL);
-	}
-	for (i = 0; i < size1 && s1 != NULL; i++)
-	{
+	for (i = 0; i < len1 && s1 != NULL; i++)
 		p[i] = s1[i];
-	}
-	for (i = 0; i < size2 + size1 && s2 != NULL; i++)
-	{
-		p[i + size1] = s2[i];
-	}
+	for (i = 0; i < len1 + len2 && s2 != NULL; i++)
+		p[len1 + i] = s2[i];
 	return (p);
 	free(p);
 }
