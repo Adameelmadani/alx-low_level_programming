@@ -23,6 +23,8 @@ int main(int argc, char *argv[])
 	c = atoi(argv[1]) * atoi(argv[2]);
 	n = c;
 	m = 1;
+	if (c == 0)
+		i = -2;
 	while (c != 0)
 	{
 		c = c / 10;
@@ -35,6 +37,8 @@ int main(int argc, char *argv[])
 		n = n - c * m;
 		_putchar(c + '0');
 	}
+	if (i == -2)
+		_putchar(0 + '0');
 	_putchar('\n');
 	return (0);
 }
