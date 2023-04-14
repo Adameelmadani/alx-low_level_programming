@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		Perror(1, argv);
-		exit(98);
+		exit(8);
 	}
 	for (i = 1; i < 3; i++)
 	{
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 			if (!(argv[i][j] >= 48 && argv[i][j] <= 57))
 			{
 				Perror(1, argv);
-				exit(98);
+				exit(8);
 			}
 		}
 	}
