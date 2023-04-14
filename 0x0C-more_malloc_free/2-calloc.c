@@ -1,9 +1,9 @@
 #include <stdlib.h>
 
 /**
-  * _calloc - function
-  * @nmemb: number
-  * @size: size of bytes
+  * _calloc - calloc function
+  * @nmemb: number of elements
+  * @size: the size of bytes
   * Return: void *
   */
 
