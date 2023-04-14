@@ -8,29 +8,21 @@
   * @argv: arg vector
   * Return: always 0
   */
-void printError(void)
-{
-	_putchar('E');
-	_putchar('r');
-	_putchar('r');
-	_putchar('o');
-	_putchar('r');
-	_putchar('\n');
-}
+
 int main(int argc, char *argv[])
 {
 	int c, n, m, i;
 
 	if (argc != 3)
 	{
-		printError();
+		error();
 		exit(98);
 	}
 	for (i = 1; i < 3; i++)
 	{
 		if (atoi(argv[i]) <= 0 && strcmp("0", argv[i]) != 0)
 		{
-			printError();
+			error();
 			exit(98);
 		}
 	}
