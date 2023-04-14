@@ -28,7 +28,7 @@ void Perror(__attribute__((unused)) int argc, __attribute__((unused))
 
 int main(int argc, char *argv[])
 {
-	int c, n, m, i;
+	int c, n, m, i, j, s;
 
 	if (argc != 3)
 	{
@@ -37,10 +37,14 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < 3; i++)
 	{
-		if (atoi(argv[i]) <= 0 && strcmp("0", argv[i]) != 0)
+		s = (int)strlen(argv[i]);
+		for (j = 0; j < s; j++)
 		{
-			Perror(1, argv);
-			exit(98);
+			if (!(argv[i][j] >= 48 && argv[i][j] <= 57))
+			{
+				Perror(1, argv);
+				exit(98);
+			}
 		}
 	}
 	c = atoi(argv[1]) * atoi(argv[2]);
