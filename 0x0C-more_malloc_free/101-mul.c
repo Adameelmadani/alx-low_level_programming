@@ -3,9 +3,26 @@
 #include <string.h>
 
 /**
-  * main - main fuction
-  * @argc: arc count
-  * @argv: arg vector
+  * Perror - print error
+  * @argc: arg
+  * @argv: arg
+  */
+
+void Perror(__attribute__((unused)) int argc, __attribute__((unused))
+		char *argv[])
+{
+	_putchar('E');
+	_putchar('r');
+	_putchar('r');
+	_putchar('o');
+	_putchar('r');
+	_putchar('\n');
+}
+
+/**
+  * main - main function
+  * @argc: argcoun
+  * @argv: argvect
   * Return: always 0
   */
 
@@ -15,14 +32,14 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		error();
+		Perror(1, argv);
 		exit(98);
 	}
 	for (i = 1; i < 3; i++)
 	{
 		if (atoi(argv[i]) <= 0 && strcmp("0", argv[i]) != 0)
 		{
-			error();
+			Perror(1, argv);
 			exit(98);
 		}
 	}

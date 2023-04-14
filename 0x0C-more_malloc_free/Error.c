@@ -1,6 +1,6 @@
 #include "main.h"
 
-void error(void)
+void Perror(void)
 {
 	_putchar('E');
 	_putchar('r');
