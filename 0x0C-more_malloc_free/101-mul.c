@@ -37,6 +37,11 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < 3; i++)
 	{
+		if (argv[i] == NULL)
+		{
+			Perror(1, argv);
+			exit(98);
+		}
 		s = (int)strlen(argv[i]);
 		if (s < 2)
 		{
