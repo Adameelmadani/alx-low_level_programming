@@ -28,7 +28,8 @@ void Perror(__attribute__((unused)) int argc, __attribute__((unused))
 
 int main(int argc, char *argv[])
 {
-	int c, n, m, i, j, s;
+	int i, j, s;
+	unsigned long c, n, m;
 
 	if (argc != 3)
 	{
