@@ -37,17 +37,7 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < 3; i++)
 	{
-		if (argv[i] == NULL)
-		{
-			Perror(1, argv);
-			exit(98);
-		}
 		s = (int)strlen(argv[i]);
-		if (s < 2)
-		{
-			Perror(1, argv);
-			exit(98);
-		}
 		for (j = 0; j < s; j++)
 		{
 			if (!(argv[i][j] >= 48 && argv[i][j] <= 57))
