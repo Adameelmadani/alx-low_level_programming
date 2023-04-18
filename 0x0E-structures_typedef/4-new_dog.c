@@ -7,6 +7,7 @@
   * @name: name
   * @age: age
   * @owner: owner
+  * Return: p
   */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -15,7 +16,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	p = malloc(sizeof(struct dog));
 	if (p == NULL || name == NULL || owner == NULL)
+	{
+		free(p);
 		return (NULL);
+	}
 	p->name = name;
 	p->age = age;
 	p->owner = owner;
