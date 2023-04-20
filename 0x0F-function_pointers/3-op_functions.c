@@ -28,9 +28,7 @@ int op_sub(int a, int b)
   */
 int op_mul(int a, int b)
 {
-	int c = a * b;
-
-	return (c);
+	return (a * b);
 }
 /**
   * op_div - sub

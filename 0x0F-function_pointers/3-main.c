@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	s = argv[2];
 	b = atoi(argv[3]);
 	if (strcmp(s, "/") != 0 && strcmp(s, "%") != 0 && strcmp(s, "+") != 0
-			&& strcmp(s, "-") != 0)
+			&& strcmp(s, "-") != 0 && strcmp(s, "*") != 0)
 	{
 		printf("Error\n");
 		exit(99);
