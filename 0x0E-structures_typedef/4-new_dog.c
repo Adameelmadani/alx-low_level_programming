@@ -17,21 +17,27 @@ dog_t *new_dog(char *name, float age, char *owner)
 	p = malloc(sizeof(struct dog));
 	if (p == NULL || p->name == NULL || p->owner == NULL)
 	{
+		free(p->name);
+		free(p->owner);
+		free(p);
+		return (NULL);
+	}
+	if (name == NULL)
+	{
+		free(p->name);
+		free(p->owner);
+		free(p);
+		return (NULL);
+	}
+	if (owner == NULL)
+	{
+		free(p->name);
+		free(p->owner);
 		free(p);
 		return (NULL);
 	}
 	p->name = name;
-	if (p->name == NULL)
-	{
-		free(p->name);
-		return (NULL);
-	}
-	p->age = age;
 	p->owner = owner;
-	if (p->owner == NULL)
-	{
-		free(p->owner);
-		return (NULL);
-	}
-	return (p);
+	p->age = age;
+	return(p);
 }
