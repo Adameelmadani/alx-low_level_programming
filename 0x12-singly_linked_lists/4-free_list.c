@@ -10,13 +10,20 @@
 
 void free_list(list_t *head)
 {
-	if (!head)
-		exit(0);
-	list *temp = head->next;
+	list_t *temp = NULL;
+	list_t *sTemp = NULL;
 
-	while(temp)
+	if (head)
 	{
-		free(temp->str);
-		temp = temp->next;
+		temp = head->next;
+		while (temp)
+		{
+			sTemp = temp->next;
+			free(temp->str);
+			free(temp);
+			temp = sTemp;
+		}
+		free(head->str);
+		free(head);
 	}
 }
