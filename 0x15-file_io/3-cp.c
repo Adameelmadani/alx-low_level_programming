@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 	if (sfd == -1 || ftruncate(sfd, 0) == -1)
 	{
 		if (close(sfd) == -1)
-			closeif(sfd);
+			closeit(sfd);
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
