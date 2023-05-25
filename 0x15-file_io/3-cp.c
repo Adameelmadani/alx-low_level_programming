@@ -6,7 +6,7 @@
 #include "main.h"
 
 /**
- * error_file - checks if files can be opened.
+ * handleFileError - checks if files can be opened.
  * @fileFrom: file_from.
  * @fileTo: file_to.
  * @args: arguments vector.
