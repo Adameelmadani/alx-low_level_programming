@@ -7,11 +7,14 @@
   */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int a = 0;
+	int j = 0, set = 0;
+	unsigned long int a, b = n ^ m;
 
-	if (n == 0)
-		a = 0;
-	if (m == 1)
-		a = 1;
-	return (a);
+	for (j = 63; j >= 0; j -= 1)
+	{
+		a = b >> j;
+		if (a & 1)
+			set += 1;
+	}
+	return (set);
 }
