@@ -8,16 +8,10 @@
   */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int j = 0;
-	int l = 0;
+	int numberinbit;
 
-	j = n * 0 + 1;
-	while (j != 0)
-	{
-		index++;
-		j--;
-	}
-	if (index == 0)
-		l = 1;
-	return (l);
+	if (index > 63)
+		return (-1);
+	numberinbit = (n >> index) & 1;
+	return (numberinbit);
 }
