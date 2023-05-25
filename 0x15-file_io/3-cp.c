@@ -56,6 +56,7 @@ int main(int argc, char *argv[])
 		if (bytesWritten == -1)
 			handleFileError(0, -1, argv);
 	}
+	/* close it */
 	errClose = close(fileFrom);
 	if (errClose == -1)
 	{
