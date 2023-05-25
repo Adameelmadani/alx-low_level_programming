@@ -5,7 +5,21 @@
   */
 void print_binary(unsigned long int n)
 {
-	unsigned long int m = n * 0;
+	int j = 0;
+	int set = 0;
+	unsigned long int number = 0;
 
-	_putchar(m + '0');
+	for (j = 63; j >= 0; j -= 1)
+	{
+		number = n >> j;
+		if (number & 1)
+		{
+			_putchar('1');
+			set += 1;
+		}
+		else if (set)
+			_putchar('0');
+	}
+	if (!set)
+		_putchar('0');
 }
