@@ -75,6 +75,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	temp = search(ht->array[index], key);
 	if (temp)
 	{
+		free(temp->value);
+		temp->value = NULL;
+		temp->value = malloc(strlen(value) + 1);
+		if (temp->value == NULL)
+		{
+			free(temp->key);
+			free(temp);
+			return (0);
+		}
 		strcpy(temp->value, value);
 		return (1);
 	}
