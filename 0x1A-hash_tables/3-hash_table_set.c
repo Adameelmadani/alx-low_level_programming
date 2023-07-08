@@ -60,6 +60,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 	hash_node_t *temp;
 
+	if (ht == NULL)
+		return (1);
 	if (strcmp(key, "") == 0)
 		return (1);
 	index = key_index((const unsigned char *)key, ht->size);
@@ -78,6 +80,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	temp = ht->array[index];
 	ht->array[index] = create_node(key, value);
+	if (ht->array[index] == NULL)
+		return (1);
 	(ht->array[index])->next = temp;
 	return (0);
 }

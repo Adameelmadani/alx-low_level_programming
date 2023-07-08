@@ -20,6 +20,10 @@ int main(void)
     hash_table_set(ht, "mentioner", "editted");
     hash_table_set(ht, "bet", "bettt");
     hash_table_set(ht, "df", "dfff");
+    hash_table_set(ht, "AAAA", "Mama mia");
+    hash_table_set(ht, "BBB!", "baba");
+    hash_table_set(ht, "CCC?", "COC3");
+    hash_table_set(ht, "DDD~", "dada");
     for (i = 0; i < ht->size; i++)
     {
 	    while (ht->array[i])
