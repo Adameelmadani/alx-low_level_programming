@@ -32,6 +32,23 @@ hash_node_t *create_node(const char *key, const char *value)
 }
 
 /**
+  * search - search for node
+  * @temp: temp
+  * @key: key
+  * Return: return NULL or pointer
+  */
+hash_node_t *search(hash_node_t *temp, const char *key)
+{
+	while (temp)
+	{
+		if (strcmp(temp->key, key) == 0)
+			return (temp);
+		temp = temp->next;
+	}
+	return (NULL);
+}
+
+/**
   * hash_table_set - hash table set
   * @ht: hash table
   * @key: key
@@ -51,6 +68,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = create_node(key, value);
 		if (ht->array[index] == NULL)
 			return (1);
+		return (0);
+	}
+	temp = search(ht->array[index], key);
+	if (temp)
+	{
+		strcpy(temp->value, value);
 		return (0);
 	}
 	temp = ht->array[index];

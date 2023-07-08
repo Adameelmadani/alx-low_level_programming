@@ -17,6 +17,7 @@ int main(void)
     hash_table_set(ht, "betty", "cool");
     hash_table_set(ht, "hetairas", "hetairasValue");
     hash_table_set(ht, "mentioner", "mentionerValue");
+    hash_table_set(ht, "mentioner", "editted");
     hash_table_set(ht, "bet", "bettt");
     hash_table_set(ht, "df", "dfff");
     for (i = 0; i < ht->size; i++)
