@@ -42,7 +42,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	hash_node_t *temp;
-	hash_node_t *s_temp;
 
 	if (strcmp(key, "") == 0)
 		return (1);
@@ -55,11 +54,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	temp = ht->array[index];
-	while (temp)
-	{
-		s_temp = temp;
-		temp = temp->next;
-	}
-	s_temp->next = create_node(key, value);
+	ht->array[index] = create_node(key, value);
+	(ht->array[index])->next = temp;
 	return (0);
 }
