@@ -32,5 +32,7 @@ int main(void)
 		    (ht->array[i]) = (ht->array[i])->next;
 	    }
     }
+    free(ht->array);
+    free(ht);
     return (EXIT_SUCCESS);
 }
