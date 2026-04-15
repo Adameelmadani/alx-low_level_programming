@@ -1,7 +1,6 @@
 # alx-low_level_programming
 
 ![C Language](https://img.shields.io/badge/Language-C-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 Welcome to the **alx-low_level_programming** repository! This project is part of the ALX Software Engineering program and focuses on foundational C programming skills, Unix system calls, and low-level programming concepts. 
 
