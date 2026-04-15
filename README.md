@@ -11,8 +11,6 @@ Welcome to the **alx-low_level_programming** repository! This project is part of
 - [Getting Started](#getting-started)
 - [How to Use](#how-to-use)
 - [Requirements](#requirements)
-- [Author](#author)
-- [License](#license)
 
 ## About
 
