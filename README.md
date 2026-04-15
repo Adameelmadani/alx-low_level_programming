@@ -2,7 +2,6 @@
 
 ![C Language](https://img.shields.io/badge/Language-C-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
-[![Documentation Status](https://readthedocs.org/projects/alx-low-level-programming/badge/?version=latest)](https://alx-low-level-programming.readthedocs.io/en/latest/?badge=latest)
 
 Welcome to the **alx-low_level_programming** repository! This project is part of the ALX Software Engineering program and focuses on foundational C programming skills, Unix system calls, and low-level programming concepts. 
 
@@ -85,11 +84,3 @@ alx-low_level_programming/
 - GCC compiler (typically `gcc`, version 4.8+)
 - Ubuntu 20.04 LTS or compatible Unix/Linux system
 - Betty style checker (for code style compliance)
-
-## Author
-
-- **Adameelmadani**
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
